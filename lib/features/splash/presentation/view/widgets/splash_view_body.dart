@@ -81,7 +81,7 @@ void navigateToHomeView() {
     Get.to(
       () => const HomeView(),
       transition: Transition.zoom,
-      duration: Duration(milliseconds: 2500),
+      duration: Duration(milliseconds: 1000),
     );
   });
 }

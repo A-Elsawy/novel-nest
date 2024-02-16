@@ -10,12 +10,12 @@ class PlayIcon extends StatelessWidget {
       width: 40,
       height: 40,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.45),
+        color: Colors.white.withOpacity(0.3),
         borderRadius: BorderRadius.circular(50),
       ),
-      child: const Icon(
+      child: Icon(
         FontAwesomeIcons.play,
-        color: Colors.white,
+        color: Colors.white.withOpacity(0.75),
         size: 20,
       ),
     );
