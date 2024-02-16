@@ -80,8 +80,8 @@ void navigateToHomeView() {
   Future.delayed(const Duration(seconds: 3), () {
     Get.to(
       () => const HomeView(),
-      transition: Transition.fadeIn,
-      duration: Duration(milliseconds: 300),
+      transition: Transition.zoom,
+      duration: Duration(milliseconds: 2500),
     );
   });
 }
