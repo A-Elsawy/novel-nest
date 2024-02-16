@@ -14,7 +14,7 @@ class TextSliding extends StatelessWidget {
         position: animation,
         child: Text(
           text,
-          style: TextStyle(fontSize: fontSize),
+          style: TextStyle(fontSize: fontSize ?? 16),
         ),
       ),
       animation: animation,
