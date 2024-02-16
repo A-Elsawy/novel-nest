@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'best_book_cover_item.dart';
+import 'new_book_cover_item.dart';
 
 class NewBooksList extends StatelessWidget {
   const NewBooksList({super.key});
@@ -12,7 +12,7 @@ class NewBooksList extends StatelessWidget {
       child: ListView.separated(
         shrinkWrap: true,
         physics: const BouncingScrollPhysics(),
-        itemBuilder: (context, index) => const BestBookCoverItem(),
+        itemBuilder: (context, index) => const NewBookCoverItem(),
         itemCount: 10,
         scrollDirection: Axis.horizontal,
         separatorBuilder: (BuildContext context, int index) =>

@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Novel Nest', style: Styles.heading),
+            const Text('Novel Nest', style: Styles.textStyle30),
             IconButton(
               icon: const Icon(FontAwesomeIcons.magnifyingGlass),
               onPressed: () {},

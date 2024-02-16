@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'best_seller.dart';
+import 'best_seller_section.dart';
 import 'custom_app_bar.dart';
 import 'new_book_list.dart';
 
@@ -14,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
         SizedBox(height: 10),
         NewBooksList(),
         SizedBox(height: 30),
-        BestSeller(),
+        BestSellerSection(),
       ],
     );
   }

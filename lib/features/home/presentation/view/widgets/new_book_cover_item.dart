@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/assets.dart';
 import 'play_icon.dart';
 
-class BestBookCoverItem extends StatelessWidget {
-  const BestBookCoverItem({super.key});
+class NewBookCoverItem extends StatelessWidget {
+  const NewBookCoverItem({super.key});
 
   @override
   Widget build(BuildContext context) {
