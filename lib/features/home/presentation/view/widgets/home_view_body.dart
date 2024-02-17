@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'best_seller_section.dart';
+import 'package:novel_nest/features/home/presentation/view/widgets/best_seller_list.dart';
+import '../../../../../core/utils/styles.dart';
+import 'best_seller_books_item.dart';
 import 'custom_app_bar.dart';
 import 'new_book_list.dart';
 
@@ -8,13 +10,31 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomAppBar(),
-        SizedBox(height: 10),
-        NewBooksList(),
-        SizedBox(height: 30),
-        BestSellerSection(),
+    return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(),
+              SizedBox(height: 10),
+              NewBooksList(),
+              SizedBox(height: 30),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'Best Seller',
+                  style: Styles.textStyle18,
+                ),
+              ),
+              SizedBox(height: 30),
+            ],
+          ),
+        ),
+        SliverFillRemaining(
+          child: BestSellerBooksList(),
+        ),
       ],
     );
   }

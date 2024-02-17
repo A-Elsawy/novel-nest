@@ -8,12 +8,15 @@ class BestSellerBooksItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        BestSellerBookCover(),
-        SizedBox(width: 30),
-        BestSellerBookData(),
-      ],
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+      child: Row(
+        children: [
+          BestSellerBookCover(),
+          SizedBox(width: 30),
+          BestSellerBookData(),
+        ],
+      ),
     );
   }
 }
