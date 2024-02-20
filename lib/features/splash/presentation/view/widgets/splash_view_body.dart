@@ -1,10 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:novel_nest/features/home/presentation/view/home_view.dart';
-
+import 'package:go_router/go_router.dart';
 import 'image_sliding.dart';
 import 'text_sliding.dart';
 
@@ -74,14 +71,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     animationController.forward();
   }
-}
 
-void navigateToHomeView() {
-  Future.delayed(const Duration(seconds: 3), () {
-    Get.to(
-      () => const HomeView(),
-      transition: Transition.zoom,
-      duration: Duration(milliseconds: 1000),
-    );
-  });
+  void navigateToHomeView() {
+    Future.delayed(const Duration(seconds: 3), () {
+      // Get.to(
+      //   () => const HomeView(),
+      //   transition: Transition.zoom,
+      //   duration: Duration(milliseconds: 1000),
+      // );
+      GoRouter.of(context).push('/homeView');
+    });
+  }
 }

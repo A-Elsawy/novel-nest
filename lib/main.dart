@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:novel_nest/features/splash/presentation/view/splash_view.dart';
+import 'package:novel_nest/core/utils/app_router.dart';
 
 void main() {
   runApp(const NovelNest());
@@ -12,12 +11,12 @@ class NovelNest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.cairoTextTheme(),
       ),
-      home: const SplashView(),
     );
   }
 }
