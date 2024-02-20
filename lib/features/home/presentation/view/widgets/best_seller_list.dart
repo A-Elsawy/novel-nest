@@ -7,11 +7,8 @@ class BestSellerBooksList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsets.all(0),
+    return SliverList.builder(
       itemBuilder: (context, index) => const BestSellerBooksItem(),
-      //separatorBuilder: (context, index) => const SizedBox(height: 10),
       itemCount: 20,
     );
   }

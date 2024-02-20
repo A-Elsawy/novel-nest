@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/best_seller_list.dart';
 import '../../../../../core/utils/styles.dart';
-import 'best_seller_books_item.dart';
 import 'custom_app_bar.dart';
 import 'new_book_list.dart';
 
@@ -32,9 +31,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
-          child: BestSellerBooksList(),
-        ),
+        BestSellerBooksList(),
       ],
     );
   }
