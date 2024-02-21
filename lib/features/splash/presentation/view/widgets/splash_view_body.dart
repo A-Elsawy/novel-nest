@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:novel_nest/core/utils/app_router.dart';
 import 'image_sliding.dart';
 import 'text_sliding.dart';
 
@@ -79,7 +80,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       //   transition: Transition.zoom,
       //   duration: Duration(milliseconds: 1000),
       // );
-      GoRouter.of(context).push('/homeView');
+      GoRouter.of(context).push(AppRouter.homeView);
     });
   }
 }

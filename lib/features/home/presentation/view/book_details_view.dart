@@ -6,8 +6,29 @@ class BookDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: BookDetailsViewBody(),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: MediaQuery.of(context).size,
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.close),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.shopping_bag_rounded),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      body: const BookDetailsViewBody(),
     );
   }
 }
