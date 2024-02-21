@@ -18,7 +18,10 @@ class BookDetailsView extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.close),
+                  icon: const Icon(
+                    Icons.close,
+                    size: 30,
+                  ),
                 ),
                 IconButton(
                   icon: const Icon(FontAwesomeIcons.cartShopping),

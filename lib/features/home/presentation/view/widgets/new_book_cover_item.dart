@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/book_cover.dart';
-import 'play_icon.dart';
+import '../../../../../core/widgets/play_icon.dart';
 
 class NewBookCoverItem extends StatelessWidget {
   const NewBookCoverItem({super.key});
