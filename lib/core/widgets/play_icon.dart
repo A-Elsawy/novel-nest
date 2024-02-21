@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PlayIcon extends StatelessWidget {
-  const PlayIcon({super.key});
+  final bool isEnable;
+  const PlayIcon({super.key, required this.isEnable});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +11,11 @@ class PlayIcon extends StatelessWidget {
       width: 40,
       height: 40,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.3),
+        color: isEnable ? Colors.white.withOpacity(0.3) : null,
         borderRadius: BorderRadius.circular(50),
       ),
       child: Icon(
-        FontAwesomeIcons.play,
+        isEnable ? FontAwesomeIcons.play : null,
         color: Colors.white.withOpacity(0.75),
         size: 20,
       ),

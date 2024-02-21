@@ -1,60 +1,31 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:novel_nest/features/home/presentation/view/widgets/book_cover.dart';
-import 'package:novel_nest/core/widgets/rating.dart';
-
+import 'package:novel_nest/features/home/presentation/view/widgets/books_list.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_details_action.dart';
+import 'book_details_info.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const BookCover(
-            height: 0.32,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            constraints: const BoxConstraints(
-              maxWidth: 250,
-              minWidth: 200,
-            ),
-            child: const AutoSizeText(
-              'Harry Potter and the Goblet of Fire',
-              style: TextStyle(
-                fontSize: 22,
-                fontFamily: 'GT Sectra Fine',
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-              maxFontSize: 28,
-              minFontSize: 20,
-            ),
-          ),
-          const SizedBox(height: 6),
-          Opacity(
-            opacity: 0.6,
+          BookDetailsInfo(),
+          SizedBox(height: 10),
+          BookDetailsAction(),
+          SizedBox(height: 10),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Text(
-              'Eiichirô Oda',
-              style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
+              'You can also like❤️',
+              style: Styles.textStyle20,
             ),
           ),
-          const SizedBox(height: 4),
-          const Rating(),
-          const SizedBox(height: 10),
-          const BookDetailsAction(),
-          const SizedBox(height: 10),
-          const Text(
-            'You can also like❤️',
-            style: Styles.textStyle20,
-          ),
+          SizedBox(height: 10),
+          BooksList(isEnable: false),
         ],
       ),
     );

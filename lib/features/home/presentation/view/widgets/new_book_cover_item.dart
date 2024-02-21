@@ -3,21 +3,22 @@ import 'package:novel_nest/features/home/presentation/view/widgets/book_cover.da
 import '../../../../../core/widgets/play_icon.dart';
 
 class NewBookCoverItem extends StatelessWidget {
-  const NewBookCoverItem({super.key});
+  final bool isEnable;
+  const NewBookCoverItem({super.key, required this.isEnable});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(right: 4.5),
+    return Padding(
+      padding: const EdgeInsets.only(right: 4.5),
       child: Stack(
         children: [
-          BookCover(
+          const BookCover(
             height: 0.27,
           ),
           Positioned(
             right: 10,
             bottom: 10,
-            child: PlayIcon(),
+            child: PlayIcon(isEnable: isEnable),
           ),
         ],
       ),

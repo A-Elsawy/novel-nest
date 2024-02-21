@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/best_seller_list.dart';
 import '../../../../../core/utils/styles.dart';
-import 'new_book_list.dart';
+import 'books_list.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -16,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 5),
-              NewBooksList(),
+              BooksList(isEnable: true),
               SizedBox(height: 30),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
