@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/assets.dart';
+import 'package:novel_nest/features/home/presentation/view/widgets/book_cover.dart';
 import 'play_icon.dart';
 
 class NewBookCoverItem extends StatelessWidget {
@@ -7,26 +7,20 @@ class NewBookCoverItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        AspectRatio(
-          aspectRatio: 2.85 / 4,
-          child: Container(
-            decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage(AssetsData.test),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.circular(12),
-            ),
+    return const Padding(
+      padding: EdgeInsets.only(right: 4.5),
+      child: Stack(
+        children: [
+          BookCover(
+            height: 0.27,
           ),
-        ),
-        const Positioned(
-          right: 10,
-          bottom: 10,
-          child: PlayIcon(),
-        ),
-      ],
+          Positioned(
+            right: 10,
+            bottom: 10,
+            child: PlayIcon(),
+          ),
+        ],
+      ),
     );
   }
 }

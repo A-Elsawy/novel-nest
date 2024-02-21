@@ -33,6 +33,7 @@ class BestSellerBookData extends StatelessWidget {
               '19.99\$',
               style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w600),
             ),
+            const SizedBox(width: 12),
             const Rating(),
           ],
         ),

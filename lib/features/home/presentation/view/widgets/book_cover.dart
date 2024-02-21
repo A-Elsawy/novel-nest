@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
 
-class BestSellerBookCover extends StatelessWidget {
-  const BestSellerBookCover({super.key});
+class BookCover extends StatelessWidget {
+  final double height;
+  const BookCover({super.key, required this.height});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.2,
+      height: MediaQuery.of(context).size.height * height,
       child: AspectRatio(
         aspectRatio: 2.85 / 4,
         child: Container(

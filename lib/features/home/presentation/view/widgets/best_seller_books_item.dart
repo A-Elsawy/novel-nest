@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:novel_nest/core/utils/app_router.dart';
 
-import 'best_seller_book_cover.dart';
+import 'book_cover.dart';
 import 'best_seller_book_data.dart';
 
 class BestSellerBooksItem extends StatelessWidget {
@@ -18,7 +18,9 @@ class BestSellerBooksItem extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
         child: Row(
           children: [
-            BestSellerBookCover(),
+            BookCover(
+              height: 0.2,
+            ),
             SizedBox(width: 30),
             BestSellerBookData(),
           ],

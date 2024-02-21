@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/book_details_view_body.dart';
 
 class BookDetailsView extends StatelessWidget {
@@ -20,7 +21,7 @@ class BookDetailsView extends StatelessWidget {
                   icon: const Icon(Icons.close),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.shopping_bag_rounded),
+                  icon: const Icon(FontAwesomeIcons.cartShopping),
                   onPressed: () {},
                 ),
               ],
