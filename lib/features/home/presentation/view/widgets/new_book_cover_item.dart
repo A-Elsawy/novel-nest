@@ -9,7 +9,7 @@ class NewBookCoverItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 4.5),
+      padding: const EdgeInsets.only(right: 4.5, bottom: 10.0),
       child: Stack(
         children: [
           const BookCover(

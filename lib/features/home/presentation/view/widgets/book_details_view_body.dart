@@ -9,25 +9,29 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          BookDetailsInfo(),
-          SizedBox(height: 10),
-          BookDetailsAction(),
-          SizedBox(height: 10),
-          Padding(
-            padding: EdgeInsets.only(left: 16.0),
-            child: Text(
-              'You can also like❤️',
-              style: Styles.textStyle20,
-            ),
+    return const CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              BookDetailsInfo(),
+              SizedBox(height: 8),
+              BookDetailsAction(),
+              Expanded(child: SizedBox(height: 8)),
+              Padding(
+                padding: EdgeInsets.only(left: 16.0),
+                child: Text(
+                  'You can also like❤️',
+                  style: Styles.textStyle20,
+                ),
+              ),
+              SizedBox(height: 10),
+              BooksList(isEnable: false),
+            ],
           ),
-          SizedBox(height: 10),
-          BooksList(isEnable: false),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

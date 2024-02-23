@@ -13,10 +13,10 @@ class BookDetailsInfo extends StatelessWidget {
     return Column(
       children: [
         const BookCover(
-          height: 0.32,
+          height: 0.30,
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         Container(
           constraints: const BoxConstraints(
@@ -26,7 +26,7 @@ class BookDetailsInfo extends StatelessWidget {
           child: const AutoSizeText(
             'Harry Potter and the Goblet of Fire',
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 21,
               fontFamily: 'GT Sectra Fine',
               fontWeight: FontWeight.bold,
             ),
@@ -40,7 +40,7 @@ class BookDetailsInfo extends StatelessWidget {
           opacity: 0.6,
           child: Text(
             'Eiichirô Oda',
-            style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
+            style: Styles.textStyle14.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
         const SizedBox(height: 4),
