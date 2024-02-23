@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+import 'package:novel_nest/core/utils/app_router.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/home_view_body.dart';
 
 import '../../../../core/utils/styles.dart';
@@ -21,7 +23,9 @@ class HomeView extends StatelessWidget {
                 const Text('Novel Nest', style: Styles.textStyle30),
                 IconButton(
                   icon: const Icon(FontAwesomeIcons.magnifyingGlass),
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouter.searchView);
+                  },
                   iconSize: 24,
                   color: Colors.black,
                 ),
