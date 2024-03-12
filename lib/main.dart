@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:novel_nest/core/utils/app_router.dart';
+import 'package:novel_nest/core/utils/service_locator.dart';
 
 void main() {
+  setup();
   runApp(const NovelNest());
 }
 
