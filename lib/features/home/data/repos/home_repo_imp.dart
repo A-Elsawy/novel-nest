@@ -5,10 +5,10 @@ import 'package:novel_nest/features/home/data/models/book_model/book_model.dart'
 import 'package:novel_nest/features/home/data/repos/home_repo.dart';
 import '../../../../core/utils/api_service.dart';
 
-class HomeRepoImplementation implements HomeRepository {
+class HomeRepositoryImplementation implements HomeRepository {
   final ApiService apiService;
 
-  HomeRepoImplementation(this.apiService);
+  HomeRepositoryImplementation(this.apiService);
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewsetBooks() async {
