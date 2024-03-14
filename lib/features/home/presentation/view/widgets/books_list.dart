@@ -19,9 +19,11 @@ class BooksList extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.27,
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) =>
-                  NewBookCoverItem(isEnable: isEnable),
-              itemCount: 10,
+              itemBuilder: (context, index) => NewBookCoverItem(
+                isEnable: isEnable,
+                image: state.books[index].volumeInfo.imageLinks.thumbnail,
+              ),
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
             ),
           );

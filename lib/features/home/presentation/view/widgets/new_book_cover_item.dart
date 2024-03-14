@@ -4,7 +4,9 @@ import '../../../../../core/widgets/play_icon.dart';
 
 class NewBookCoverItem extends StatelessWidget {
   final bool isEnable;
-  const NewBookCoverItem({super.key, required this.isEnable});
+  final String image;
+  const NewBookCoverItem(
+      {super.key, required this.isEnable, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +14,9 @@ class NewBookCoverItem extends StatelessWidget {
       padding: const EdgeInsets.only(right: 4.5, bottom: 10.0),
       child: Stack(
         children: [
-          const BookCover(
+          BookCover(
             height: 0.27,
+            imageUrl: image,
           ),
           Positioned(
             right: 10,

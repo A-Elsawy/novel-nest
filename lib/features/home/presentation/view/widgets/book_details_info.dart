@@ -14,6 +14,7 @@ class BookDetailsInfo extends StatelessWidget {
       children: [
         const BookCover(
           height: 0.30,
+          imageUrl: '',
         ),
         const SizedBox(
           height: 10,

@@ -20,6 +20,7 @@ class BooksItem extends StatelessWidget {
           children: [
             BookCover(
               height: 0.2,
+              imageUrl: '',
             ),
             SizedBox(width: 30),
             BestSellerBookData(),
