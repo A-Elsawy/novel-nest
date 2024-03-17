@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:novel_nest/features/home/presentation/view/widgets/best_seller_list.dart';
+
 import '../../../../../core/utils/styles.dart';
 import 'books_list.dart';
 

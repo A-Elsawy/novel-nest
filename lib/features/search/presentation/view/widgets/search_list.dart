@@ -8,10 +8,12 @@ class SearchListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: ListView.builder(
-      physics: const BouncingScrollPhysics(),
-      itemBuilder: (context, index) => const BooksItem(),
-      itemCount: 30,
-    ));
+      child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        //itemBuilder: (context, index) => const BooksItem(),
+        itemBuilder: (context, index) => Container(),
+        itemCount: 30,
+      ),
+    );
   }
 }

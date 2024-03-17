@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:novel_nest/core/utils/app_router.dart';
 
-import '../../features/home/presentation/view/widgets/book_cover.dart';
+import '../../features/home/data/models/book_model/book_model.dart';
 import '../../features/home/presentation/view/widgets/best_seller_book_data.dart';
+import '../../features/home/presentation/view/widgets/book_cover.dart';
 
 class BooksItem extends StatelessWidget {
-  const BooksItem({super.key});
+  final BookModel book;
+  const BooksItem({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +16,16 @@ class BooksItem extends StatelessWidget {
       onTap: () {
         GoRouter.of(context).push(AppRouter.bookDetailsView);
       },
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
         child: Row(
           children: [
             BookCover(
-              height: 0.2,
-              imageUrl: '',
+              height: 0.12,
+              imageUrl: book.volumeInfo.imageLinks.thumbnail,
             ),
-            SizedBox(width: 30),
-            BestSellerBookData(),
+            const SizedBox(width: 30),
+            BestSellerBookData(book: book),
           ],
         ),
       ),

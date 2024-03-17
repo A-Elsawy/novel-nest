@@ -14,7 +14,7 @@ class BookDetailsInfo extends StatelessWidget {
       children: [
         const BookCover(
           height: 0.30,
-          imageUrl: '',
+          imageUrl: 'https://placehold.co/600x400',
         ),
         const SizedBox(
           height: 10,

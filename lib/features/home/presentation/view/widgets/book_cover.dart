@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BookCover extends StatelessWidget {
@@ -11,14 +12,10 @@ class BookCover extends StatelessWidget {
       height: MediaQuery.of(context).size.height * height,
       child: AspectRatio(
         aspectRatio: 2.85 / 4,
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(imageUrl),
-              fit: BoxFit.cover,
-            ),
-            borderRadius: BorderRadius.circular(15),
-          ),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.cover,
+          errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
       ),
     );

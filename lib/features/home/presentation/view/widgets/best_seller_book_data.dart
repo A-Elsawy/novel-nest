@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:novel_nest/features/home/data/models/book_model/book_model.dart';
 
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/rating.dart';
 
 class BestSellerBookData extends StatelessWidget {
-  const BestSellerBookData({super.key});
+  final BookModel book;
+  const BestSellerBookData({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
